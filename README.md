@@ -1,15 +1,13 @@
 # diq-platform-libs
 
-Shared Maven build standards and Spring Boot platform starters for DisputeIQ.
+Shared Spring Boot platform starters for DisputeIQ, built with Gradle 8.10.2.
 
 ## Modules
 
-- `diq-build-config`: Packages `diq/checkstyle.xml`.
-- `diq-parent`: Shared parent POM (Java 21, Spring Boot 3.4 BOM, Spotless, Checkstyle, Surefire, JaCoCo).
 - `diq-common-starter`: `TenantId`, `TenantContext` (`ScopedValue`), `TenantAware`, and `CorrelationHeaders`.
 
-## Build & Install
+## Build & Publish Locally
 
 ```powershell
-.\mvnw.cmd clean install
+.\gradlew.bat check publishToMavenLocal
 ```

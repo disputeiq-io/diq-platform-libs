@@ -1,0 +1,3 @@
+rootProject.name = 'diq-platform-libs'
+
+include 'diq-common-starter'

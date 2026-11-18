@@ -1,0 +1,20 @@
+plugins {
+    id 'com.diffplug.spotless' version '6.25.0' apply false
+}
+
+subprojects {
+    group = 'io.disputeiq'
+    version = '1.0.0-SNAPSHOT'
+
+    apply plugin: 'com.diffplug.spotless'
+    apply plugin: 'maven-publish'
+    apply from: rootProject.file('gradle/java-conventions.gradle')
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+            }
+        }
+    }
+}
